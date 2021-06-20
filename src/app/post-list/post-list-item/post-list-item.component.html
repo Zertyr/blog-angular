@@ -1,0 +1,15 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLoveIts >= 1,
+                'list-group-item-danger': postLoveIts <= -1}">
+        <h2 [ngStyle]="{color: getColor()}" class="postTitle">{{ postTitle }}</h2>
+        <h3 class=" postCreatedAt text-muted"> {{ postCreatedAt | date: 'short' }}</h3>
+        <p class="postContent text-justify">{{postContent}}</p>
+
+        <button class="btn btn-success" (click)="likeIt(indexOfPost)"> Love it !</button>
+        &nbsp;
+        <button class="btn btn-danger btn-floating" (click)="dontLikeIt(indexOfPost)"> Don't love it !</button>
+        &nbsp;
+        <button type="button" class="btn btn-danger btn-floating pull-right" (click)="onDeletePost(indexOfPost)">
+                <fa-icon [icon]="trash"></fa-icon>
+        </button>
+</li>
