@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PostService } from 'src/app/services/post.service';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { Post } from 'src/app/models/post.model';
 
 
 @Component({

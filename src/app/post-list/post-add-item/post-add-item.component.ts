@@ -37,6 +37,7 @@ export class PostAddItemComponent implements OnInit {
     );
 
     this.postService.newPost(newPost);
+    this.postService.getPostFromServer();
     this.router.navigate(['/posts']);
   }
 }
